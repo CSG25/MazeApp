@@ -206,19 +206,19 @@ World.add(world, ball);
 
 document.addEventListener('keydown', event => {
   const {x, y} = ball.velocity;
-  if(event.key === 'w') {
+  if(event.key === 'w' || event.key === 'ArrowUp') {
     Body.setVelocity(ball, {x, y: y-2.3});
   }
 
-  if(event.key === 'd' ) {
+  if(event.key === 'd' || event.key === 'ArrowRight' ) {
     Body.setVelocity(ball, {x: x + 2.3, y});
   }
 
-  if(event.key === 's' ) {
+  if(event.key === 's' || event.key === 'ArrowDown') {
     Body.setVelocity(ball, {x, y: y + 2.3});
   }
 
-  if(event.key === 'a' ) {
+  if(event.key === 'a' || event.key === 'ArrowLeft') {
     Body.setVelocity(ball, {x: x - 2.3, y});
   }
 });
